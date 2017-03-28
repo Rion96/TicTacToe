@@ -13,7 +13,7 @@ If you want, you can have both players use random numbers to play and observe th
 
 This whole thing was kind of a first step into writing real programs for TempleOS and isn't all that impressive, but I thought I'd share it if anyone wants to give it a try.
 
-# Start the Game
+# Starting the Game
 
     Cd("T:");
     #include "Run.HC.Z";
