@@ -10,6 +10,7 @@ You can choose the player input for each player. The Options are:
   - Random: Play against God. (He's not that good at TicTacToe 😉)
   
 If you want, you can have both players use random numbers to play and observe the game.
+
 This whole thing was kind of a first step into writing real programs for TempleOS and isn't all that impressive, but I thought I'd share it if anyone wants to give it a try.
 
 # Start the Game
