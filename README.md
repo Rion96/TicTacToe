@@ -19,4 +19,4 @@ This whole thing was kind of a first step into writing real programs for TempleO
   
 Make sure to start the game with Run.HZ.C.
 The game needs to run in a separate task because the OS may crash if you run TTT.HC.Z directly.
-I deducted that might happen because of Sleep and Beep but I don't know for sure.
+I deducted that this might happen because of my use of Sleep and Beep but I don't know for sure.
