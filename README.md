@@ -4,7 +4,7 @@ My first game for TempleOS.
 
 You can choose the player input for each player. The Options are:
 
-  - Human:  Use the Number Keys (1 to 9) to place your X/O (The Layout is: Top Left Box: 1, Bottom right Box: 9, left to right)
+  - Human:  Use the mouse to place your X/O
                   
   - Computer: Play against God. (He's not that good at TicTacToe 😉)
   
@@ -17,6 +17,6 @@ This whole thing was kind of a first step into writing real programs for TempleO
 # Starting the Game
 
     Cd("T:");
-    #include "TicTacToe.HC.Z";
-  
-The game might crash the OS on occasion for some reason. It hasn't happened for a while, but if you do experience the issue, start the game in a separate task to prevent it from happening.
+    #include "Start.HC.Z";
+
+Make sure to start the game with the startup script. Starting the game directly may cause to OS to crash
