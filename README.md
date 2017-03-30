@@ -6,7 +6,7 @@ You can choose the player input for each player. The Options are:
 
   - Human:  Use the mouse to place your X/O
                   
-  - Computer: Play against God. (He's not that good at TicTacToe 😉)
+  - Computer (Random): Play against God. (He's not that good at TicTacToe 😉)
   
   - Computer (Smart AI): If the AI detects a move that allows for a victory or blocks the opponent from winning, it will do that. Otherwise it will just place X/O randomly
   
