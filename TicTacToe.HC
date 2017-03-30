@@ -1,5 +1,5 @@
+//Sprites removed for GitHub
 
-//Removed Sprites for GitHub
 
 
 //Use Smart AI?
@@ -22,6 +22,9 @@ U64 *board[]  = {sprites[0],sprites[0],sprites[0],
 I64 checks[]  = {0,0,0,
 		 0,0,0,
 		 0,0,0};
+
+I64 arg1;
+I64 arg2;
 
 U8 ch;
 
@@ -66,7 +69,7 @@ Sprite3(dc,156,128,0,board[5]);
 Sprite3(dc,100,156,0,board[6]);
 Sprite3(dc,128,156,0,board[7]);
 Sprite3(dc,156,156,0,board[8]);
-GrPrint(dc,128,200,"Press 0 to quit");
+GrPrint(dc,120,200,"Press ESC to quit");
 }
 
 
@@ -186,7 +189,7 @@ if((!PlayerX&&PlayerOAI)||(PlayerX&&PlayerXAI)){
 	 	 //"%d",ch;
 		Sleep(250);
 	}
-}else{
+}/*else{
 	do{	
 		do{
 		  //"$$BG,GREEN$$Press 0 to cancel";
@@ -198,8 +201,44 @@ if((!PlayerX&&PlayerOAI)||(PlayerX&&PlayerXAI)){
 		if(ch=='0'){GameOver;break;}
 		ch-=48;
 	}while(state[ch]!=0);
-}
-}
+}*/
+else{
+Bool input=TRUE;
+  while (input&&state[0]==0) {
+      switch (ScanMsg(&arg1,&arg2,1<<MSG_MS_L_DOWN+1<<MSG_KEY_DOWN)) {
+	case 0:
+	  Refresh;
+	  break;
+	case MSG_MS_L_DOWN:
+		if(arg1>=143&&arg1<=225&&arg2>=101&&arg2<=183){
+			if(arg1<=169&&arg2<=127)
+				ch=1;
+			else if(arg1<=197&&arg2<=127)
+				ch=2;
+			else if(arg1<=225&&arg2<=127)
+				ch=3;
+			else if(arg1<=169&&arg2<=155)
+				ch=4;
+			else if(arg1<=197&&arg2<=155)
+				ch=5;
+			else if(arg1<=225&&arg2<=155)
+				ch=6;
+			else if(arg1<=169&&arg2<=183)
+				ch=7;
+			else if(arg1<=197&&arg2<=183)
+				ch=8;
+			else
+				ch=9;
+	  	}
+		if(state[ch]==0)input=FALSE;
+	  break;
+	case MSG_KEY_DOWN:
+		if(arg1==CH_ESC)
+		  GameOver;
+	  break;
+	}
+	}
+}}
 
 U0 IsOver(){
 	Bool free=FALSE;
@@ -267,3 +306,4 @@ do{
 }while(PlayAgain);
 DocClear;
 SettingsPop;
+Kill(Fs);
