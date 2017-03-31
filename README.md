@@ -2,6 +2,8 @@
 ![Game](https://raw.githubusercontent.com/Rion96/TicTacToe/master/TicTacToe.PNG)
 My first game for TempleOS.
 
+[Video](https://www.youtube.com/watch?v=pDFA8TFHv74)
+
 You can choose the player input for each player. The Options are:
 
   - Human:  Use the mouse to place your X/O
